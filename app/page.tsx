@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const supabase = createClient(
   "https://dsybzlbnyowihgbhjivu.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzeWJ6bGJueW93aWhnYmhqaXZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE5NTM5OTcsImV4cCI6MjA1NzUyOTk5N30.qHNYM64O5LBwtpn8Tnh1S2fCFM4bzrCMKNrMHsll3IE"
+  process.env.supabase || ""
 );
 
 export default function Home() {
