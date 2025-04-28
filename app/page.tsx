@@ -4,10 +4,8 @@ import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation";
 
-const supabase = createClient(
-  "https://dsybzlbnyowihgbhjivu.supabase.co",
-  process.env.NEXT_PUBLIC_supabase || ""
-);
+const key = process.env.NEXT_PUBLIC_SUPABASE || "";
+const supabase = createClient("https://dsybzlbnyowihgbhjivu.supabase.co", key);
 
 export default function Home() {
   const router = useRouter();
